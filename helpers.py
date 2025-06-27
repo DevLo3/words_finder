@@ -12,3 +12,12 @@ def get_files_path(extension='.txt'):
     # print(file_full_path)
     return files_full_path
 
+
+def find_word_in_files(str_to_find):
+    all_files = get_files_path()
+    for file in all_files:
+        with open(file, 'r') as f:
+            lines = f.readlines()
+            for line in lines:
+                if str_to_find in line:
+                    print(line)
