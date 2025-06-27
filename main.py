@@ -1,4 +1,5 @@
-import os
+from helpers import *
 
-print("hello world")
-print("bye world")
+# main execution block/script entry point
+if __name__ == '__main__':
+    get_files_path()
