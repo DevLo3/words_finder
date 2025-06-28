@@ -1,5 +1,9 @@
 import os
 
+colors = {
+    'red': "\033[91m",
+    'base': "\033[0m"
+}
 
 def get_files_path(extension='.txt'):
     # create a string that is the path to words_dir directory
@@ -20,4 +24,7 @@ def find_word_in_files(str_to_find):
             lines = f.readlines()
             for line in lines:
                 if str_to_find in line:
-                    print(line)
+                    matched_lined_pretty = line.replace(
+                        str_to_find, f"{colors['red']}{str_to_find}{colors['base']}"
+                    )
+                    print(matched_lined_pretty)
