@@ -27,4 +27,4 @@ def find_word_in_files(str_to_find):
                     matched_lined_pretty = line.replace(
                         str_to_find, f"{colors['red']}{str_to_find}{colors['base']}"
                     )
-                    print(matched_lined_pretty)
+                    print(f"{file}:{matched_lined_pretty}")
